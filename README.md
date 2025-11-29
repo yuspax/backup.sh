@@ -1,22 +1,40 @@
 # Backup.sh
-Simple Bash script to create a compressed backup of any directory.   
-Supports custom source and destination paths. 
- 
-Features
-- Compresses any directory into a .tar.gz file 
-- Adds the current date to the backup filename (backup-YYYY-MM-DD.tar.gz) 
-- Easy to run with custom source and destination 
-- Basic success/failure notification
 
-# Make script executable
-chmod +x backup.sh 
+Simple Bash script to create a compressed backup of any directory. Supports custom source and destination paths.
 
-# Set paths inside the script
-Open backup.sh in a text editor and set the variables at the top: 
+## Quick Start
 
-SOURCE="/path/to/directory"    #Directory to back up
+**Make script executable:**
 
-DEST="/path/to/backup"         #Where to save the backup
+```bash
+chmod +x backup.sh
+```
 
-# Run the script 
+**Run with default paths (set inside the script):**
+
+```bash
 ./backup.sh
+```
+
+## What It Does
+
+Creates a compressed backup (`.tar.gz`) of any directory you choose.
+
+The output file is saved as:
+
+```
+backup-YYYY-MM-DD.tar.gz
+```
+
+Script notifies you whether the backup succeeded or failed.
+
+## Configuration
+
+Edit the variable paths at the top of `backup.sh`:
+
+```bash
+SOURCE="/path/to/directory"     # Directory to back up
+DEST="/path/to/backup"          # Where to save the backup
+```
+
+
